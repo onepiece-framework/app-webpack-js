@@ -81,7 +81,7 @@
 
 			//	line
 			var span = document.createElement('span');
-			span.innerText = json.line;
+			span.innerText = json.line === undefined ? '': json.line;
 			span.classList.add('line');
 			tds.line.appendChild(span);
 
