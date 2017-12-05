@@ -42,7 +42,9 @@
 
 		//	...
 		tags.th.innerText = index;
-		if( typeof value !== 'object' ){
+
+		//	...
+		if( typeof value !== 'object' || value === null ){
 			var span = document.createElement('span');
 				span.classList.add('args');
 				span.appendChild( $OP.Arg(value) );
