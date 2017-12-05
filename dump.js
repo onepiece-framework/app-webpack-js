@@ -44,7 +44,8 @@
 		tags.th.innerText = index;
 		if( typeof value !== 'object' ){
 			var span = document.createElement('span');
-				span.innerHTML = value;
+				span.classList.add('args');
+				span.appendChild( $OP.Arg(value) );
 			tags.td.appendChild(span);
 		}else{
 			tags.td.appendChild(table(value));
