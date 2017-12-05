@@ -10,7 +10,7 @@
 //	...
 (function(){
 	//	...
-	$OP.Notice = function(div){
+	$OP.Notice = function(div, i){
 		//	...
 		if(!div.innerText){
 			return;
@@ -49,6 +49,45 @@
 		//	...
 		div.innerText = '';
 		div.appendChild(temp);
+
+		//	...
+		setTimeout(function(){
+			__notice(me1.innerText, me2.innerText);
+		}, 1000 * i);
+	}
+
+	function __notice(message, subtext){
+		//	...
+		D(message, subtext);
+
+		//	...
+		var area = document.querySelector('#OP_NOTICE_AREA');
+		if(!area ){
+			//	...
+			area = document.createElement('div');
+			area.id = 'OP_NOTICE_AREA';
+
+			//	...
+			var body = document.querySelector('body');
+				body.insertBefore(area, body.children[0]);
+		}
+
+		//	...
+		var div  = document.createElement('div');
+		var span = document.createElement('span');
+			span.innerText = message;
+
+		//	...
+		div .appendChild(span);
+		area.appendChild(div);
+
+		//	...
+		setTimeout(function(){
+			div.classList.add('hide');
+			setTimeout(function(){
+				area.removeChild(div);
+			}, 1000 * 1);
+		}, 1000 * 3);
 	}
 
 	//	...
@@ -114,7 +153,7 @@
 	document.addEventListener('DOMContentLoaded', function(){
 		var divs = document.querySelectorAll('div.OP_NOTICE');
 		for(var i=0; i<divs.length; i++){
-			$OP.Notice(divs[i]);
+			$OP.Notice(divs[i], i);
 		}
 	});
 })();
