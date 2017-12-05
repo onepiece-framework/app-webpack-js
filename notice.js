@@ -1,5 +1,5 @@
 /**
- * app-skeleton-3:/html/js/op/notice.js
+ * app-webpack-js:/notice.js
  *
  * @creation  2017-07-28
  * @version   1.0

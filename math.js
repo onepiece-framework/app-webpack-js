@@ -1,5 +1,5 @@
 /**
- * app-skeleton-3:/html/js/op/math.js
+ * app-webpack-js:/math.js
  *
  * @creation  2017-11-20
  * @version   1.0

@@ -1,5 +1,5 @@
 /**
- * app-skeleton-3:/html/js/op/url.js
+ * app-webpack-js:/url.js
  *
  * @creation  2017-06-08
  * @version   1.0

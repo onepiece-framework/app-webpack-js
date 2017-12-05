@@ -1,5 +1,5 @@
 /**
- * app-skeleton-3:/html/js/op/i18n.js
+ * app-webpack-js:/i18n.js
  *
  * @creation  2017-06-07
  * @version   1.0

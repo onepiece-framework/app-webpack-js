@@ -1,5 +1,5 @@
 /**
- * app-skeleton-3:/html/js/op/d.js
+ * app-webpack-js:/d.js
  *
  * @creation  2017-06-07
  * @version   1.0

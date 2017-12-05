@@ -1,5 +1,5 @@
 /**
- * app-skeleton-3:/html/js/op/args.js
+ * app-webpack-js:/args.js
  *
  * @creation  2017-07-31
  * @version   1.0

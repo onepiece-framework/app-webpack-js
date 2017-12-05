@@ -1,5 +1,5 @@
 /**
- * app-skeleton-3:/html/js/op/path.js
+ * app-webpack-js:/path.js
  *
  * @creation  2017-10-05
  * @version   1.0
