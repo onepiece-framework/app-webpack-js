@@ -33,40 +33,6 @@
 		div.appendChild(spans.file);
 		div.appendChild(spans.line);
 		div.appendChild(spans.args);
-
-		/*
-		//	...
-		for(var i=0; i<json.args.length; i++){
-			var type = json.args[i].type;
-			var text = json.args[i].value;
-			var span = document.createElement('span');
-
-			//	...
-			span.classList.add('arg');
-			span.classList.add(type);
-
-			//	...
-			if( type === 'string' ){
-				//	...
-				span.innerHTML = show_meta_character(text);
-			}else{
-				//	...
-				if( type === 'NULL' ){
-					text = 'null';
-				}
-
-				if( type === 'boolean' ){
-					span.classList.add( text ? 'true':'false' );
-				}
-
-				//	...
-				span.innerText = text;
-			}
-
-			//	...
-			spans.args.appendChild(span);
-		}
-		*/
 	}
 
 	//	...
