@@ -45,7 +45,6 @@
 		if( typeof value !== 'object' ){
 			var span = document.createElement('span');
 				span.innerHTML = value;
-			//	span.classList.add('value');
 			tags.td.appendChild(span);
 		}else{
 			tags.td.appendChild(table(value));
