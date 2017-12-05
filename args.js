@@ -11,40 +11,53 @@
 (function(){
 	/** Generate arguments spans.
 	 *
-	 * @param
-	 * @return
+	 * @param  array
+	 * @return DOM
 	 */
-	$OP.Args = function(json){
+	$OP.Args = function(values, is_notice){
+		//	...
 		var args = document.createElement('span');
 			args.classList.add('args');
-		if( json ){
-			for(var i=0; i<json.length; i++ ){
-				var arg = document.createElement('span');
-					arg.classList.add('arg');
-					arg.appendChild( __arg(json[i]) );
-				args.appendChild( arg );
+
+		//	...
+		if( values ){
+			for(var i=0; i<values.length; i++ ){
+				args.appendChild( $OP.Arg(values[i], is_notice) );
 			}
 		}
+
+		//	...
 		return args;
 	}
 
 	/** Create each argument span.
 	 *
-	 * @param
-	 * @return
+	 * @param  mixed
+	 * @return DOM
 	 */
-	function __arg(val){
+	$OP.Arg = function(val, is_notice){
 		var span = document.createElement('span');
 		var type = val === null ? 'null': typeof val;
 
 		//	...
+		span.classList.add('arg');
 		span.classList.add(type);
 
 		//	...
 		if( type === 'string' ){
-			val = $OP.Path.Compress(val);
-			val = show_meta_character(val);
-			span.innerHTML = val;
+			//	...
+			if( is_notice ){
+				val = $OP.Path.Compress(val);
+			}
+
+			//	...
+			span.innerHTML = __meta(val);
+
+			//	...
+		//	if( val.match(/^\s?\d+\s?$/) ){
+			if( val.match(/^\d+$/) ){
+				span.classList.add('quote');
+			}
 		}else{
 			//	...
 			if( type === 'null' ){
@@ -54,6 +67,7 @@
 			//	...
 			if( type === 'boolean' ){
 				span.classList.add( val ? 'true':'false' );
+				val = val ? 'true':'false';
 			}
 
 			//	...
@@ -66,11 +80,13 @@
 
 	/** Show meta character.
 	 *
+	 * @param  string
+	 * @return string
 	 */
-	function show_meta_character(t){
-		return	 t.replace(/ /g,  '<span class="meta space">&nbsp;</span>')
+	function __meta(s){
+		return s.replace(/ /g,  '<span class="meta space">&nbsp;</span>')
 				.replace(/\t/g, '<span class="meta tag">\\t</span>')
-				.replace(/\r/g, '<span class="meta lf">\\r</span>')
-				.replace(/\n/g, '<span class="meta cr">\\n</span>');
+				.replace(/\r/g, '<span class="meta cr">\\r</span>')
+				.replace(/\n/g, '<span class="meta lf">\\n</span>');
 	}
 })();
