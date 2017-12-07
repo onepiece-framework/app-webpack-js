@@ -139,7 +139,7 @@
 
 			//	arguments
 			if( span.innerText ){
-				tds.func.appendChild( $OP.Args(json.args) );
+				tds.func.appendChild( $OP.Args(json.args, true) );
 			}
 
 		var tr = document.createElement('tr');
