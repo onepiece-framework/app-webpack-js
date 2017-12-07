@@ -22,7 +22,10 @@
 		//	...
 		if( values ){
 			for(var i=0; i<values.length; i++ ){
-				args.appendChild( $OP.Arg(values[i], is_notice) );
+				var arg = document.createElement('span');
+					arg.classList.add('arg');
+					arg.appendChild( $OP.Arg(values[i], is_notice) );
+				args.appendChild( arg );
 			}
 		}
 
