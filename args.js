@@ -61,6 +61,11 @@
 			if( val.match(/^\d+$/) ){
 				span.classList.add('quote');
 			}
+
+			//	...
+			if( val === 'true' || val === 'false' || val === 'null' ){
+				span.classList.add('quote');
+			}
 		}else{
 			//	...
 			if( type === 'null' ){
