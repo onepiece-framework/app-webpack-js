@@ -45,10 +45,18 @@
 
 		//	...
 		if( typeof value !== 'object' || value === null ){
+			//	...
 			var span = document.createElement('span');
-				span.classList.add('args');
+				span.classList.add('arg');
 				span.appendChild( $OP.Arg(value) );
-			tags.td.appendChild(span);
+
+			//	...
+			var args = document.createElement('span');
+				args.classList.add('args');
+				args.appendChild(span);
+
+			//	...
+			tags.td.appendChild(args);
 		}else{
 			tags.td.appendChild(table(value));
 		}
