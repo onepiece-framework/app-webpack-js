@@ -19,6 +19,16 @@ if( typeof $OP.URL === "undefined" ){
 	var domain  = "<?php echo $_SERVER['SERVER_NAME'] ?>";
 
 	//	...
+	location.search.substr(1).split('&').map(function(v){
+		var m = v.match(/^([^=]+)(=)(.+)/);
+		if( m ){
+			var key = m[1];
+			var val = m[3];
+			queries[key] = val;
+		}
+	});
+
+	//	...
 	$OP.URL.Domain = function(){
 		return domain;
 	};
@@ -47,16 +57,6 @@ if( typeof $OP.URL === "undefined" ){
 			//	Web storage
 		}
 	}
-
-	//	...
-	location.search.substr(1).split('&').map(function(v){
-		m = v.match(/^([^=]+)(=)(.+)/);
-		if( m ){
-			var key = m[1];
-			var val = m[3];
-			queries[key] = val;
-		}
-	});
 
 	//	...
 	function __generate(){
