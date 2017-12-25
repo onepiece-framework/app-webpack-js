@@ -42,6 +42,7 @@
 
 		//	...
 		tags.th.innerText = index;
+		tags.th.addEventListener('click', click, false);
 
 		//	...
 		if( typeof value !== 'object' || value === null ){
@@ -64,6 +65,15 @@
 		//	...
 		return temp;
 	}
+
+	//	...
+	function click(e){
+		if( this.parentNode.childNodes[1].childNodes[0].hidden ){
+			this.parentNode.childNodes[1].childNodes[0].hidden = false;
+		}else{
+			this.parentNode.childNodes[1].childNodes[0].hidden = true;
+		}
+	};
 
 	//	...
 	document.addEventListener('DOMContentLoaded', function(){
