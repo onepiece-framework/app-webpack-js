@@ -59,5 +59,5 @@ $OP.D = function(){
 };
 
 //	...
-d = $OP.D;
-D = $OP.D;
+var d = $OP.D;
+var D = $OP.D;

@@ -7,6 +7,12 @@
  * @author    Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
  * @copyright Tomoaki Nagahara All right reserved.
  */
+
+/** strict
+ *
+ */
+"use strict";
+
 /** foreach
  *
  * <pre>
@@ -26,7 +32,7 @@ Object.defineProperty(Object.prototype, "foreach", {
 });
 
 //	...
-$OP = {};
+var $OP = {};
 
 //	...
 $OP.Path = {};
