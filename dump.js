@@ -32,9 +32,9 @@
 		var temp = document.createElement('tr');
 
 		//	...
-		tags = {};
-		tags.th = document.createElement('th');
-		tags.td = document.createElement('td');
+		var tags = {};
+			tags.th = document.createElement('th');
+			tags.td = document.createElement('td');
 
 		//	...
 		temp.appendChild(tags.th);
