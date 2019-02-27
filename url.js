@@ -26,7 +26,7 @@ if(!$OP.URL ){
 	 * @creation  2018-11-01
 	 */
 	var __meta = {};
-		__meta.app = "<?= ConvertURL('app:/'); ?>";
+		__meta.app = "<?= \OP\ConvertURL('app:/'); ?>";
 
 	/** Set meta url label and real url.
 	 *

@@ -47,12 +47,10 @@ $OP.Path.Convert = function( path ){
 	 */
 	var __meta = {};
 
-	/** Register meta path.
-	 *
-	 */
-	$OP.Path.Register = function( meta, path ){
-		__meta[meta] = path;
-	};
+	/* <?php if( \OP\Env::isAdmin() ): ?> */
+	//	Will execute just only for admin.
+	var __meta = JSON.parse('<?= json_encode(\OP\RootPath()) ?>');
+	/* <?php endif; ?> */
 
 	/** Compress path.
 	 *
@@ -77,13 +75,4 @@ $OP.Path.Convert = function( path ){
 		//	...
 		return path;
 	};
-
-	/** Add meta path.
-	 *
-	 */
-	/* <?php if( \Env::isAdmin() ): ?> */
-	//	Execute just admin only.
-	$OP.Path.Register('app'  , "<?= ConvertPath('app:/') ?>"  );
-	$OP.Path.Register('alias', "<?= ConvertPath('alias:/') ?>");
-	/* <?php endif; ?> */
 })();
