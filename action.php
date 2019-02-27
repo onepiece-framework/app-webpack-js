@@ -1,46 +1,21 @@
 <?php
 /**
- * app-webpack-js:/action.php
+ * app-skeleton-webpack:/js/op/action.php
  *
- * @creation  2017-06-29
+ * @creation  2018-04-12
  * @version   1.0
- * @package   op-skeleton
+ * @package   app-skeleton-webpack
  * @author    Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
  * @copyright Tomoaki Nagahara All right reserved.
  */
-//	...
-$extension = 'js';
-
-//	...
-$files = [];
-$files[] = 'core';
-$files[] = 'path';
-$files[] = 'd';
-$files[] = 'args';
-$files[] = 'mark';
-$files[] = 'dump';
-$files[] = 'notice';
-$files[] = 'ajax';
-$files[] = 'url';
-$files[] = 'i18n';
-$files[] = 'math';
-
-//	...
-Webpack::Run(__DIR__, $files, $extension);
-
-?>
-<?php if( Env::isAdmin() ): ?>
-$OP.meta.path.op  = "<?= ConvertPath('op:/')  ?>";
-$OP.meta.path.app = "<?= ConvertPath('app:/') ?>";
-$OP.meta.path.doc = "<?= ConvertPath('doc:/') ?>";
-
-/** Check if admin.
- *
- * <pre>
- * $OP.isAdmin(); --> true / false
- * </pre>
- */
-$OP.isAdmin = function(){
-	return <?= Env::isAdmin() ? 'true': 'false'; ?>;
-}
-<?php endif; ?>
+return [
+	__DIR__.'/op',
+	__DIR__.'/path',
+	__DIR__.'/args',
+	__DIR__.'/d',
+	__DIR__.'/url',
+	__DIR__.'/ajax',
+	__DIR__.'/date',
+	__DIR__.'/html',
+	__DIR__.'/ux-submit',
+];

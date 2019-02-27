@@ -1,14 +1,14 @@
 /**
- * app-webpack-js:/args.js
+ * app-skeleton-webpack:/js/op/args.js
  *
  * @creation  2017-07-31
  * @version   1.0
- * @package   app-skeleton
+ * @package   app-skeleton-webpack
  * @author    Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
  * @copyright Tomoaki Nagahara All right reserved.
  */
 //	...
-(function(){
+//(function(){
 	/** Generate arguments spans.
 	 *
 	 * @param  array
@@ -40,7 +40,7 @@
 	 */
 	$OP.Arg = function(val, is_notice){
 		var span = document.createElement('span');
-		var type = val === null ? 'null': typeof val;
+		var type = (val === null) ? 'null': typeof val;
 
 		//	...
 		span.classList.add('arg');
@@ -53,30 +53,53 @@
 				val = $OP.Path.Compress(val);
 			}
 
-			//	...
-			span.innerHTML = __meta(val);
+			//	In case of from the Notice.
+			if( is_notice ){
+			//	span.innerText = val;
+				span.innerHTML = __meta(val);
+			}else{
+				span.innerHTML = __meta(val);
+			}
 
-			//	...
-		//	if( val.match(/^\s?\d+\s?$/) ){
+			//	Display: 123 --> "123" (Not number)
+		//	if( val.match(/^\s?\d+\s?$/) ){ // <-- What is this? <-- maybe " 123 "
 			if( val.match(/^\d+$/) ){
 				span.classList.add('quote');
 			}
 
-			//	...
+			//	Display: true --> "true" (Not boolean)
 			if( val === 'true' || val === 'false' || val === 'null' ){
+				span.classList.add('quote');
+			}
+
+			//	Display: "" (Empty string)
+			if( val.length === 0 ){
 				span.classList.add('quote');
 			}
 		}else{
 			//	...
 			if( type === 'null' ){
 				val = 'null';
-			}
+			}else
 
 			//	...
 			if( type === 'boolean' ){
 				span.classList.add( val ? 'true':'false' );
 				val = val ? 'true':'false';
-			}
+			}else
+
+			//	...
+			if( type === 'object' ){
+				span.dataset.json = JSON.stringify(val);
+				span.classList.add('pointer');
+				if( is_notice ){
+					span.classList.add('underline');
+				}
+				val = 'object';
+			}else
+
+			//	...
+			{  }
 
 			//	...
 			span.innerText = val;
@@ -92,9 +115,11 @@
 	 * @return string
 	 */
 	function __meta(s){
-		return s.replace(/ /g,  '<span class="meta space">&nbsp;</span>')
-				.replace(/\t/g, '<span class="meta tag">\\t</span>')
+		return s.replace(/</g,  '&lt;')
+				.replace(/>/g,  '&gt;')
+				.replace(/ /g,  '<span class="meta space">&nbsp;</span>')
+				.replace(/\t/g, '<span class="meta tab">\\t</span>')
 				.replace(/\r/g, '<span class="meta cr">\\r</span>')
 				.replace(/\n/g, '<span class="meta lf">\\n</span>');
-	}
-})();
+	};
+//})();
