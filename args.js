@@ -55,15 +55,11 @@
 
 			//	In case of from the Notice.
 			if( is_notice ){
-				span.innerText = val;
-				/*
+			//	span.innerText = val;
 				span.innerHTML = __meta(val);
-				*/
 			}else{
-				span.innerText = val;
-				/*
+			//	span.innerText = val;
 				span.innerHTML = __meta(val);
-				*/
 			}
 
 			//	Display: 123 --> "123" (Not number)
