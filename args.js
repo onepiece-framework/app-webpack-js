@@ -68,7 +68,7 @@
 
 			//	Display: 123 --> "123" (Not number)
 		//	if( val.match(/^\s?\d+\s?$/) ){ // <-- What is this? <-- maybe " 123 "
-			if( val.match(/^\d+$/) ){
+			if( val.match(/^[\d\.]+$/) ){
 				span.classList.add('quote');
 			}
 
