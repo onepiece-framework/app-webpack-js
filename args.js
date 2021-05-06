@@ -50,7 +50,7 @@
 		if( type === 'string' ){
 			//	...
 			if( is_notice ){
-			//	val = $OP.Path.Compress(val);
+				val = $OP.Path.Compress(val);
 			}
 
 			//	In case of from the Notice.
