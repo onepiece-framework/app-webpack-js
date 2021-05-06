@@ -62,6 +62,7 @@
 				span.innerHTML = __meta(val);
 			}
 
+			/*
 			//	Display: 123 --> "123" (Not number)
 		//	if( val.match(/^\s?\d+\s?$/) ){ // <-- What is this? <-- maybe " 123 "
 			if( val.match(/^[\d\.]+$/) ){
@@ -77,6 +78,8 @@
 			if( val.length === 0 ){
 				span.classList.add('quote');
 			}
+			*/
+
 		}else{
 			//	...
 			if( type === 'null' ){
