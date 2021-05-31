@@ -1,9 +1,9 @@
 
-/** op-module-webpack:/js/op/ToLowerCase.js
+/** op-webpack-js:/js/op/ToLowerCase.js
  *
  * @created   2020-10-24
  * @version   1.0
- * @package   op-module-webpack
+ * @package   op-webpack-js
  * @author    Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
  * @copyright Tomoaki Nagahara All right reserved.
  */

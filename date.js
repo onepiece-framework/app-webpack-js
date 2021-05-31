@@ -1,9 +1,9 @@
-/**
- * op-module-webpack:/js/op/date.js
+
+/** op-webpack-js:/js/op/date.js
  *
  * @created   2018-09-27
  * @version   1.0
- * @package   op-module-webpack
+ * @package   op-webpack-js
  * @author    Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
  * @copyright Tomoaki Nagahara All right reserved.
  */

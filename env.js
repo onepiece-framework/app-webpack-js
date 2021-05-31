@@ -1,9 +1,9 @@
-/**
- * op-module-webpack:/js/op/action.php
+
+/** op-webpack-js:/js/op/action.php
  *
  * @created   2019-04-27
  * @version   1.0
- * @package   op-module-webpack
+ * @package   op-webpack-js
  * @author    Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
  * @copyright Tomoaki Nagahara All right reserved.
  */

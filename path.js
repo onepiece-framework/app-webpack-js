@@ -1,11 +1,11 @@
-/**
- * op-module-webpack:/js/op/path.js
+
+/** op-webpack-js:/js/op/path.js
  *
  * This script user is just developers.
  *
  * @created   2017-10-05
  * @version   1.0
- * @package   op-module-webpack
+ * @package   op-webpack-js
  * @author    Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
  * @copyright Tomoaki Nagahara All right reserved.
  */
@@ -26,7 +26,7 @@ $OP.Path = {};
  *
  * @created   2017-06-07
  * @version   1.0
- * @package   op-module-webpack
+ * @package   op-webpack-js
  * @author    Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
  * @copyright Tomoaki Nagahara All right reserved.
  */
@@ -37,7 +37,7 @@ $OP.Path.Convert = function( path ){
 /**
  * @created   2018-11-03
  * @version   1.0
- * @package   op-module-webpack
+ * @package   op-webpack-js
  * @author    Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
  * @copyright Tomoaki Nagahara All right reserved.
  */

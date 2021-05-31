@@ -1,9 +1,9 @@
-/**
- * op-module-webpack:/js/op/op.js
+
+/** op-webpack-js:/js/op/op.js
  *
  * @created   2017-06-07
  * @version   1.0
- * @package   op-module-webpack
+ * @package   op-webpack-js
  * @author    Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
  * @copyright Tomoaki Nagahara All right reserved.
  */
